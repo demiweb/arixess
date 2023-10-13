@@ -54,7 +54,14 @@ function changeTab() {
                     ),
                         e.classList.add("active"),
                         [...document.querySelectorAll(".build-tabs__wrap .single-build-tab")].forEach((e,t)=>{
-                                t === o ? e.classList.add("active") : e.classList.remove("active")
+                               if( t === o) {
+                                   e.classList.add("active");
+                                   $([document.documentElement, document.body]).animate({
+                                       scrollTop: $(e).offset().top - 140
+                                   }, 500);
+                               } else {
+                                   e.classList.remove("active")
+                               }
                             }
                         ))
                 }

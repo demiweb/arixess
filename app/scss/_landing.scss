@@ -1228,7 +1228,7 @@
       top: 0;
       left: 0;
       background: #fff;
-      opacity: 0.25;
+      opacity: 0.6;
       display: inline-block;
       content: '';
     }
@@ -1290,11 +1290,47 @@
   .land-hero__cont h1 {
     font-size: 28px;
   }
+  .build-tabs__cont {
+    margin-top: 20px;
+  }
   .build-tabs__head .single-btn {
-    width: 100%;
+    width: calc(50% - 5px);
+  }
+  .build-tabs__head {
+    margin-bottom: 20px;
+  }
+  .build-tabs__head .single-btn {
+    padding: 0 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    p {
+      font-size: 12px;
+    }
+    span {
+      position: static;
+      font-size: 12px;
+      &::before {
+        position: static;
+      }
+    }
+  }
+  .build-tabs {
+    padding: 35px 0;
+  }
+  .benefits-list {
+    margin-top: 30px;
   }
   .advice-block__cont .left span {
     font-size: 26px;
+  }
+  .single-benefit .txt span {
+    font-size: 18px;
+  }
+  .single-benefit .txt p {
+    font-size: 14px;
   }
   .single-build-tab .txt span {
     font-size: 20px;
@@ -1309,11 +1345,15 @@
 
     .txt, .text {
       width: 100%;
-      padding: 20px 14px;
+      padding: 12px 8px;
 
       span {
         width: 100%;
+        font-size: 18px;
         text-align: center;
+      }
+      p {
+        font-size: 14px;
       }
     }
   }
@@ -1323,16 +1363,35 @@
   }
   .single-benefit {
     width: 100%;
-    padding: 30px 20px;
+    padding: 20px 13px;
 
     .img {
-      height: 70px;
+      height: 55px;
     }
 
     .txt {
       span {
         margin-bottom: 13px;
       }
+    }
+  }
+  .bookcall-cont .img {
+    &::after {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      content: '';
+      background: #555;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+  }
+  .single-benefit .txt span {
+    br {
+      display: none;
     }
   }
 }
@@ -1356,15 +1415,72 @@
   margin-bottom: 13px;
 }
 @media screen and (max-width: 470px) {
+
+  .modal-win .modal-container {
+    max-height: calc(100vh - 30px);
+  }
+  .modal-win {
+    padding: 10px 15px;
+  }
+  .modal-win .modal-cont h2 {
+    font-size: 24px;
+    margin-bottom: 13px;
+  }
+  .modal-cont.contact-sec>p {
+    margin-bottom: 10px;
+  }
+  .modal-win {
+    .wpcf7-spinner {
+      display: none !important;
+    }
+    .file-btn {
+      display: none;
+    }
+    .contact-sec .form-group {
+      margin-bottom: 7px;
+
+    }
+    .contact-sec .wpcf7-form-control {
+      height: 36px;
+      padding: 5px 12px 5px;
+    }
+    .contact-sec .wpcf7-form-control.wpcf7-textarea {
+      height: 90px;
+    }
+  }
+  .modal-win .modal-container {
+    padding: 20px 10px;
+  }
   .bookcall-cont .text .btn {
     width: 100%;
   }
   .bookcall-cont {
     padding-top: 75%;
   }
+  .benefits {
+    padding: 40px 0;
+  }
+  .ari-comments .progress-res {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .ari-comments {
+    padding-bottom: 30px;
+  }
+  .advice-block__cont .left span {
+    font-size: 23px;
+  }
+  .ari-cases .img p {
+    font-size: 27px;
+  }
   .benefits h2 {
-    max-width: 335px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .land-hero {
+    & ~ div h2, & ~ section h2 {
+      font-size: 21px;
+    }
   }
 }
