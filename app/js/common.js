@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 });
 
-let tabBtn = [...document.querySelectorAll(".build-tabs__head .single-btn")];
+let tabBtn = [...document.querySelectorAll(".build-head .single-btn")];
 function changeTab() {
     tabBtn.length && tabBtn.forEach((e,o)=>{
             e.addEventListener("click", ()=>{
@@ -71,6 +71,24 @@ function changeTab() {
 }
 changeTab();
 
+let singleBuild = [...document.querySelectorAll('.single-build .build-tabs__head')];
+
+function controlSingleBuild() {
+    if (singleBuild.length) {
+        singleBuild.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                singleBuild.forEach((btn2) => {
+                    btn2.classList.remove('active');
+                    btn2.querySelector('.single-btn').classList.remove('active');
+                });
+                btn.classList.add('active');
+                btn.querySelector('.single-btn').classList.add('active');
+            })
+        })
+    }
+}
+
+controlSingleBuild();
 
 //modal window
 

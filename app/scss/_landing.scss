@@ -1280,7 +1280,69 @@
   }
 }
 
+.mobile-build {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
+  .build-head {
+    display: none;
+  }
+  .build-tabs__wrap {
+    display: none !important;
+  }
+
+  .mobile-build {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    counter-reset: my-awesome-counter3 !important;
+  }
+  .single-build .build-tabs__head {
+    margin-bottom: 0;
+  }
+  .single-build {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    counter-increment: my-awesome-counter3 !important;
+    .build-tabs__head {
+      width: 100%;
+
+
+      .single-btn {
+        flex-direction: row;
+        gap: 5px;
+
+
+
+        span {
+          &::before {
+            content: counter(my-awesome-counter3, decimal-leading-zero) !important;
+          }
+        }
+        p {
+          font-size: 14px;
+        }
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
+      &.active {
+        & ~ .single-build-tab {
+          display: flex;
+        }
+      }
+    }
+    .single-build-tab {
+      display: none;
+    }
+  }
   .bookcall-cont .text h2 {
     font-size: 26px;
   }
