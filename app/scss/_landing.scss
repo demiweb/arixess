@@ -1335,12 +1335,15 @@
       }
       &.active {
         & ~ .single-build-tab {
-          display: flex;
+          max-height: 400px;
         }
       }
     }
     .single-build-tab {
-      display: none;
+      display: flex;
+      transition: all 0.6s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
     }
   }
   .bookcall-cont .text h2 {
