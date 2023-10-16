@@ -83,6 +83,11 @@ function controlSingleBuild() {
                 });
                 btn.classList.add('active');
                 btn.querySelector('.single-btn').classList.add('active');
+                setTimeout(() => {
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $(btn).offset().top - 7
+                    }, 500);
+                }, 600)
             })
         })
     }
