@@ -1510,7 +1510,19 @@
     }
     .contact-sec .wpcf7-form-control {
       height: 36px;
-      padding: 5px 12px 5px;
+      padding: 9px 12px 5px;
+    }
+    .contact-sec .form-group .placeholder {
+      line-height: 36px;
+    }
+    .contact-sec .form-group{
+      &.focused {
+        .placeholder {
+          font-size: 10px;
+          line-height: 16px;
+        }
+
+      }
     }
     .contact-sec .wpcf7-form-control.wpcf7-textarea {
       height: 90px;
@@ -1547,6 +1559,7 @@
     margin-right: auto;
   }
   .land-hero {
+    height: 100vh;
     & ~ div h2, & ~ section h2 {
       font-size: 21px;
     }
