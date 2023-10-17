@@ -97,6 +97,32 @@ controlSingleBuild();
 
 //modal window
 
+//btn-go
+
+let btnGo = [...document.querySelectorAll('.btn-go')];
+
+function goBtnScroll() {
+    if (btnGo.length) {
+        btnGo.forEach((btn) => {
+            let dat = btn.dataset.go;
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(`.${dat}`).offset().top
+                }, 600);
+
+            });
+
+
+        })
+    }
+}
+
+goBtnScroll();
+
 let btnMod = [...document.querySelectorAll('.btn-mod')];
 let modals = [...document.querySelectorAll('.modal-win')];
 
@@ -140,7 +166,7 @@ function controlModal() {
     }
 }
 
-controlModal();
+// controlModal();
 
 
 

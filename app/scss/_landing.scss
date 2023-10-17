@@ -267,7 +267,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0;
     z-index: 1;
 
     img {
@@ -360,7 +360,7 @@
     height: 0;
     padding-top: 43%;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0;
     position: relative;
 
     &::after {
@@ -501,7 +501,7 @@
 
 .advice-block__cont {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 0;
   background: linear-gradient(270deg, #202020 0%, #000 100%);
   padding: 45px 73px;
   overflow: hidden;
@@ -678,7 +678,7 @@
 
   .img {
     width: 50%;
-    border-radius: 15px;
+    border-radius: 0;
     height: 0;
     padding-top: 29%;
     overflow: hidden;
@@ -1462,6 +1462,45 @@
       display: none;
     }
   }
+
+  .sec-contact-sec {
+    &.contact-sec {
+      .custom-form {
+        margin-top: 27px;
+      }
+
+      .wpcf7-spinner {
+        display: none !important;
+      }
+      .file-btn {
+        display: none;
+      }
+
+    }
+    &.contact-sec .form-group {
+      margin-bottom: 7px;
+
+    }
+    &.contact-sec .wpcf7-form-control {
+      height: 36px;
+      padding: 9px 12px 5px;
+    }
+    &.contact-sec .form-group .placeholder {
+      line-height: 36px;
+    }
+    &.contact-sec .form-group{
+      &.focused {
+        .placeholder {
+          font-size: 10px;
+          line-height: 16px;
+        }
+
+      }
+    }
+    &.contact-sec .wpcf7-form-control.wpcf7-textarea {
+      height: 90px;
+    }
+  }
 }
 .modal-cont.contact-sec {
   > p {
@@ -1624,6 +1663,27 @@
         color: #fff;
         text-shadow: none;
       }
+    }
+  }
+  .single-build .build-tabs__head .single-btn {
+    justify-content: flex-start;
+    position: relative;
+    &::after {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      background: url("../img/land/arr-na.svg") no-repeat center / 100% auto;
+      transform: translate(0, -50%) rotate(90deg);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .single-build .build-tabs__head.active .single-btn {
+    &::after {
+      transform: translate(0, -50%) rotate(-90deg);
     }
   }
 }
