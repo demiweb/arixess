@@ -1838,3 +1838,13 @@ $main-font: 'Gotham Pro', sans-serif;
     }
   }
 }
+.contact-sec .form-group.focused .placeholder {
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: auto;
+  top: 0;
+  border-top: 1px solid #4aae95;
+  border-left: 1px solid #4aae95;
+  border-right: 1px solid #4aae95;
+}
