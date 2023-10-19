@@ -334,6 +334,9 @@ $main-font: 'Gotham Pro', sans-serif;
 
 .bookcall {
   width: 100%;
+  & + .ari-comments {
+    padding-top: 60px;
+  }
 }
 
 .bookcall-cont {
