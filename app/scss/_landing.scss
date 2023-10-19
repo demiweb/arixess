@@ -754,10 +754,11 @@ $main-font: 'Gotham Pro', sans-serif;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 15px;
+  gap: 0;
   counter-reset: my-awesome-counter2;
 
   .single-btn {
+    width: 25%;
     padding: 20px 24px;
     position: relative;
     cursor: pointer;
