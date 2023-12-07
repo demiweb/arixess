@@ -25,7 +25,7 @@ $(document).ready(function() {
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 400,
-        infinite: false,
+        infinite: true,
         dots: true,
         fade: false,
         arrows: true,
@@ -42,6 +42,39 @@ $(document).ready(function() {
     var sldCr1 = $slider2.slick;
     // console.log(sldCr1);
 
+//    slider techs
+
+    var $sliderTech = $('.techs-slides');
+
+
+
+    function controlTechSlider() {
+        if (window.innerWidth < 600) {
+            $sliderTech.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 400,
+                infinite: true,
+                dots: false,
+                fade: false,
+                arrows: true,
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }]
+
+            });
+            var sldCr2 = $sliderTech.slick;
+        }
+    }
+    controlTechSlider()
+
+//    slider techs
+
 });
 
 let tabBtn = [...document.querySelectorAll(".build-head .single-btn")];
@@ -56,9 +89,7 @@ function changeTab() {
                         [...document.querySelectorAll(".build-tabs__wrap .single-build-tab")].forEach((e,t)=>{
                                if( t === o) {
                                    e.classList.add("active");
-                                   $([document.documentElement, document.body]).animate({
-                                       scrollTop: $(e).offset().top - 140
-                                   }, 500);
+
                                } else {
                                    e.classList.remove("active")
                                }
@@ -165,6 +196,16 @@ function controlModal() {
 
     }
 }
+
+$(window).scroll(function (e) {
+    $el = $('.call-landing');
+    $el.toggleClass('fixs', $(this).scrollTop() > 60);
+
+});
+$(document).ready(function () {
+    $el = $('.call-landing');
+    $el.toggleClass('fixs', $(this).scrollTop() > 60);
+});
 
 // controlModal();
 
